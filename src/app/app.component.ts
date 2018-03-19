@@ -16,33 +16,33 @@ export class AppComponent implements OnInit {
   menuTheme = 'white';
 
   constructor(
-    private _router: Router,
-    private _renderer: Renderer2,
-    private _menuService: MenuService
+    private router: Router,
+    private renderer: Renderer2,
+    private menuService: MenuService
   ) {}
 
   ngOnInit() {
 
-    this._router.events.subscribe((event) => {
+    this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         this.menuTheme = event.url === '/home' ? 'white' : 'black';
 
         // Verify if route is home to add cover theme
         if (event.url === '/home') {
-          this._renderer.addClass(document.body, 'cover');
+          this.renderer.addClass(document.body, 'cover');
         } else {
-          this._renderer.removeClass(document.body, 'cover');
+          this.renderer.removeClass(document.body, 'cover');
         }
 
-        this._setActiveMenu(event.url);
+        this.setActiveMenu(event.url);
       }
 
     });
 
-    this.menuItens = this._menuService.getMenuItens();
+    this.menuItens = this.menuService.getMenuItens();
   }
 
-  private _setActiveMenu(route) {
+  private setActiveMenu(route) {
     this.menuItens.forEach(menuItem => {
         menuItem.active = menuItem.routerLink.includes(route);
     });

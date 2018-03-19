@@ -1,6 +1,6 @@
 import { RouterLink } from '@angular/router';
 
-export class MenuItem {
+export interface MenuItem {
   text: string;
   routerLink: Array<string>;
   active: boolean;
