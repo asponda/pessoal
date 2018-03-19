@@ -1,0 +1,10 @@
+<nav [ngClass]="{
+  white: theme === 'white',
+  black: theme === 'black'
+}">
+  <ul>
+    <li *ngFor="let item of menuItens" [ngClass]="{'menu-item--active': item.active}">
+      <a [routerLink]="item.routerLink" routerLinkActive="router-link-active">{{item.text}}</a>
+    </li>
+  </ul>
+</nav>

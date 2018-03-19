@@ -1,0 +1,16 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/font-family.scss';
+@import '../../../../styles/font-size.scss';
+
+:host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: $color-brand;
+    font-family: $typo-roboto-light;
+    font-size: $font-size-big;
+  }
+}

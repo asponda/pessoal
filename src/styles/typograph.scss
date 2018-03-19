@@ -1,0 +1,12 @@
+@import '../styles/font-size.scss';
+@import '../styles/font-family.scss';
+
+h1 {
+  font-size: $font-size-big;
+}
+
+h2 {
+  font-size: $font-size-medium;
+  font-family: $typo-opensans-regular;
+  font-weight: normal;
+}

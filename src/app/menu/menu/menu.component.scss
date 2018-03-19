@@ -1,0 +1,36 @@
+@import '../../../styles/colors.scss';
+
+:host {
+  nav {
+
+  }
+
+  ul {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  li {
+    list-style: none;
+    margin-right: 16px;
+
+    &:first-child {
+      margin-left: auto;
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    &.menu-item--active {
+      border-bottom: 1px solid $color-brand;
+    }
+
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: lowercase;
+  }
+
+}
