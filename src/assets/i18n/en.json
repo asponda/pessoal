@@ -1,0 +1,12 @@
+{
+  "TEST": "Testando 1234",
+  "MENU": {
+    "ABOUT": "About",
+    "SKILLS": "Skills",
+    "CONTACT": "Contact"
+  },
+  "HOME": {
+    "SUBTITLE": "Driven by results, I'm not a simple developer.",
+    "CONTACT": "Contact"
+  }
+}

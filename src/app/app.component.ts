@@ -2,6 +2,9 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router, NavigationStart} from '@angular/router';
 
+// Translate
+import { TranslateService } from '@ngx-translate/core';
+
 // Components
 import { MenuItem } from './menu/model/menu-item';
 import { MenuService } from './menu/services/menu/menu.service';
@@ -18,8 +21,13 @@ export class AppComponent implements OnInit {
   constructor(
     private router: Router,
     private renderer: Renderer2,
+    private translateService: TranslateService,
     private menuService: MenuService
-  ) {}
+  ) {
+    translateService.addLangs(['en', 'pt']);
+    translateService.setDefaultLang('en');
+    translateService.use('en');
+  }
 
   ngOnInit() {
 
@@ -47,4 +55,9 @@ export class AppComponent implements OnInit {
         menuItem.active = menuItem.routerLink.includes(route);
     });
   }
+
+  switchLanguage(language: string) {
+    this.translateService.use(language);
+  }
+
 }

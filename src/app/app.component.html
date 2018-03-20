@@ -2,8 +2,11 @@
   <div class="logo">
     <app-logo></app-logo>
   </div>
+
   <div class="menu">
+
     <app-menu [menuItens]="menuItens" [theme]="menuTheme"></app-menu>
+
   </div>
 </header>
 
@@ -11,4 +14,13 @@
   <router-outlet></router-outlet>
 </main>
 
-<footer></footer>
+<footer>
+  <div class="footer--content">
+    Copyright  2018, Airton Sponda
+  </div>
+
+  <div class="footer--language">
+    <button (click)="switchLanguage('en')">en</button>
+    <button (click)="switchLanguage('pt')">pt</button>
+  </div>
+</footer>

@@ -1,0 +1,11 @@
+{
+  "TEST": "Testando 1234 PT",
+  "MENU": {
+    "ABOUT": "Sobre",
+    "SKILLS": "Habilidades",
+    "CONTACT": "Contato"
+  },
+  "HOME": {
+    "SUBTITLE": "Guiado por resultados"
+  }
+}

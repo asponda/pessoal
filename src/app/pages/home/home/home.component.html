@@ -1,9 +1,11 @@
 <section class="home__content">
   <h1 class="home__title">Airton Sponda</h1>
-  <h2 class="home__sub">Driven by results, I'm not a simple developer.</h2>
+  <h2 class="home__sub" [translate]="'HOME.SUBTITLE'">
+    Driven by results, I'm not a simple developer.
+  </h2>
 </section>
 
 <section>
-    <a [routerLink]="['/contact']" routerLinkActive="router-link-active" class="button">Contact</a>
+    <a [routerLink]="['/contact']" routerLinkActive="router-link-active" class="button" [translate]="'MENU.CONTACT'">Contact</a>
 </section>
 
