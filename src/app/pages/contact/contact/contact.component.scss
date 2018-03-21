@@ -1,0 +1,14 @@
+.social {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+
+  * {
+    margin-right: 16px;
+  }
+
+  a {
+    font-size: 60px;
+    text-decoration: none;
+  }
+}
