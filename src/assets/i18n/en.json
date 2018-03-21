@@ -6,7 +6,12 @@
     "CONTACT": "Contact"
   },
   "HOME": {
-    "SUBTITLE": "Driven by results, I'm not a simple developer.",
-    "CONTACT": "Contact"
+    "SUBTITLE": "Driven by results, I'm not a simple developer."
+  },
+  "CONTACT": {
+    "NAME_ERROR": "Invalid name.",
+    "EMAIL_ERROR": "Invalid e-mail.",
+    "SUBJECT_ERROR": "Invalid subject.",
+    "MESSAGE_ERROR": "Invalid message."
   }
 }

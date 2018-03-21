@@ -1,3 +1,44 @@
-<p>
-  contact works!
-</p>
+<h2>Contact me</h2>
+
+<section>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onFormSubmit()">
+
+    <div>
+      <label for="name" required>Name</label>
+      <input id="name" type="text" formControlName="name" required />
+
+      <app-input-error [display]="isValid('name')" message="{{ 'CONTACT.NAME_ERROR' | translate }}"></app-input-error>
+    </div>
+
+    <div>
+      <label for="email" required>E-Mail</label>
+      <input id="email" type="text" formControlName="email" required />
+      <app-input-error [display]="isValid('email')" message="{{ 'CONTACT.EMAIL_ERROR' | translate }}"></app-input-error>
+    </div>
+
+    <div>
+      <label for="subject" required>Subject</label>
+      <input id="subject" type="text" formControlName="subject" required />
+      <app-input-error [display]="isValid('subject')" message="{{ 'CONTACT.SUBJECT_ERROR' | translate }}"></app-input-error>
+    </div>
+
+    <div>
+      <label for="message" required>Message</label>
+      <input id="message" type="text" formControlName="message" required />
+      <app-input-error [display]="isValid('message')" message="{{ 'CONTACT.MESSAGE_ERROR' | translate }}"></app-input-error>
+    </div>
+
+    <div class="buttons">
+      <button type="submit">Send</button>
+      <button type="button" (click)="onClearClick()">Clear</button>
+      <app-input-error [display]="isValid('name')"></app-input-error>
+    </div>
+  </form>
+
+</section>
+
+<section id="social">
+  <i class="github"></i>
+  <i class="linkedin"></i>
+</section>

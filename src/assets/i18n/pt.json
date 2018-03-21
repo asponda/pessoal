@@ -7,5 +7,11 @@
   },
   "HOME": {
     "SUBTITLE": "Guiado por resultados"
+  },
+  "CONTACT": {
+    "NAME_ERROR": "Nome inválido.",
+    "EMAIL_ERROR": "E-mail inválido.",
+    "SUBJECT_ERROR": "Assunto inválido.",
+    "MESSAGE_ERROR": "Mensagem inválida."
   }
 }
