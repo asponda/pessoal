@@ -8,6 +8,12 @@
     <app-menu [menuItens]="menuItens" [theme]="menuTheme"></app-menu>
 
   </div>
+
+  <div class="language">
+    <i aria-hidden="true" class="fas fa-globe language--icon"></i>
+    <button (click)="switchLanguage('en')" aria-label="english" [ngClass]="{'language--active': language === 'en'}">en</button>
+    <button (click)="switchLanguage('pt')" aria-label="português" [ngClass]="{'language--active': language === 'pt'}">pt</button>
+  </div>
 </header>
 
 <main>
@@ -19,8 +25,5 @@
     Copyright  2018, Airton Sponda
   </div>
 
-  <div class="footer--language">
-    <button (click)="switchLanguage('en')">en</button>
-    <button (click)="switchLanguage('pt')">pt</button>
-  </div>
+
 </footer>

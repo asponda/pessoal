@@ -18,6 +18,10 @@ export class AppComponent implements OnInit {
   menuItens: Array<MenuItem>;
   menuTheme = 'white';
 
+  get language() {
+    return this.translateService.currentLang;
+  }
+
   constructor(
     private router: Router,
     private renderer: Renderer2,
