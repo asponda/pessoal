@@ -1,6 +1,7 @@
 // Angular
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router, NavigationStart} from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 // Translate
 import { TranslateService } from '@ngx-translate/core';
@@ -25,6 +26,7 @@ export class AppComponent implements OnInit {
   constructor(
     private router: Router,
     private renderer: Renderer2,
+    private titleService: Title,
     private translateService: TranslateService,
     private menuService: MenuService
   ) {
@@ -37,31 +39,64 @@ export class AppComponent implements OnInit {
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
-        this.menuTheme = event.url === '/home' ? 'white' : 'black';
-
-        // Verify if route is home to add cover theme
-        if (event.url === '/home') {
-          this.renderer.addClass(document.body, 'cover');
-        } else {
-          this.renderer.removeClass(document.body, 'cover');
-        }
-
+        this.setTheme(event.url);
         this.setActiveMenu(event.url);
       }
-
     });
 
     this.menuItens = this.menuService.getMenuItens();
   }
 
+  private setTheme(url) {
+    const isHome =  url === '/' || url === '/home';
+
+    this.menuTheme = isHome ? 'white' : 'black';
+
+    // Verify if route is home to add cover theme
+    if (isHome) {
+      this.renderer.addClass(document.body, 'cover');
+    } else {
+      this.renderer.removeClass(document.body, 'cover');
+    }
+  }
+
   private setActiveMenu(route) {
+    if (route === '/home') {
+      this.setPageTitle();
+    }
+
     this.menuItens.forEach(menuItem => {
-        menuItem.active = menuItem.routerLink.includes(route);
+      menuItem.active = menuItem.routerLink.includes(route);
+
+      if (menuItem.active) {
+        // Set page title with translated text
+        this.translateService.get(menuItem.translateId).subscribe((result) => {
+          this.setPageTitle(result);
+        });
+      }
+
     });
+  }
+
+  private setPageTitle(text?: string) {
+    this.titleService.setTitle(`Airton Sponda${text ? ' - ' + text : ''}`);
   }
 
   switchLanguage(language: string) {
     this.translateService.use(language);
+
+    // Find active menu
+    const activeMenu = this.menuItens.find(m => m.active);
+
+    if (activeMenu) {
+      // Set page title with translated text
+      this.translateService.get(activeMenu.translateId).subscribe((result) => {
+        this.setPageTitle(result);
+      });
+    } else {
+      this.setPageTitle();
+    }
+
   }
 
 }
