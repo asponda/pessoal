@@ -61,12 +61,11 @@ export class AppComponent implements OnInit {
   }
 
   private setActiveMenu(route) {
-    if (route === '/home') {
-      this.setPageTitle();
-    }
+
+    const routeCompare = route === '/' ? this.menuItens.find(m => m.routerLink.includes('/home')).routerLink[0] : route;
 
     this.menuItens.forEach(menuItem => {
-      menuItem.active = menuItem.routerLink.includes(route);
+      menuItem.active = menuItem.routerLink.includes(routeCompare);
 
       if (menuItem.active) {
         // Set page title with translated text
