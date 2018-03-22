@@ -1,3 +1,9 @@
-<p>
-  skills works!
-</p>
+<h1>Skills</h1>
+
+<div class="skills--items">
+
+  <div *ngFor="let item of skillList">
+    <app-skill-item [quantity]="item.quantity" [name]="item.name"></app-skill-item>
+  </div>
+
+</div>

@@ -1,0 +1,8 @@
+<label>{{ name }}</label>
+
+<div class="skill-item--group">
+  <div *ngFor="let item of getItensToFill; let i = index"
+        class="skill-item--content"
+        [ngClass]="{ 'skill-item--content-fill': i <= quantity -1 }">
+  </div>
+</div>
