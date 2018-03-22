@@ -19,6 +19,8 @@ export class AppComponent implements OnInit {
   menuItens: Array<MenuItem>;
   menuTheme = 'white';
 
+  isCover = false;
+
   get language() {
     return this.translateService.currentLang;
   }
@@ -39,6 +41,8 @@ export class AppComponent implements OnInit {
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
+        this.isCover = event.url === '/' || event.url === '/home';
+
         this.setTheme(event.url);
         this.setActiveMenu(event.url);
       }

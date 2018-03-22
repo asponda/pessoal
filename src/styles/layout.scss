@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
   background-color: $color-white;
   color: $color-black;
-  font-family: $typo-roboto-regular;
+  font-family: $typo-opensans-regular;
   font-size: 1rem;
 
   display: flex;
@@ -23,6 +23,11 @@ body {
   background-size: cover;
   background-attachment: scroll;
   color: $color-white;
+
+  main {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 
   a {
     color: $color-white;

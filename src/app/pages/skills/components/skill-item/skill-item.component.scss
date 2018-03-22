@@ -1,6 +1,7 @@
+@import '~styles/colors.scss';
+
 .skill-item--group {
   display: flex;
-  background: green;
   min-height: 30px;
 }
 
@@ -9,5 +10,5 @@
 }
 
 .skill-item--content-fill {
-  background-color: red;
+  background-color: $color-brand;
 }

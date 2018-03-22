@@ -8,15 +8,13 @@
 }
 
 main {
-  padding: 32px 16px 16px 16px;
-  margin-top: auto;
-  margin-bottom: auto;
+  padding: 16px;
 }
 
 header {
   display: flex;
   align-items: center;
-  padding: 8px 16px;
+  padding: 16px;
 
   @media (max-width: '414px') {
     flex-direction: column;
@@ -24,16 +22,12 @@ header {
 }
 
 footer {
-  padding: 0px 16px;
+  padding: 16px;;
   margin-top:  auto;
 
-  height: 66px;
   display: flex;
   align-items: center;
 
-  .footer--content {
-
-  }
 }
 
 .logo {
@@ -50,6 +44,10 @@ footer {
   }
 }
 
+.button--cover-language {
+  color: $color-white;
+}
+
 .language {
   margin-left: auto;
   display: flex;
@@ -61,8 +59,6 @@ footer {
   }
 
   button {
-    background: transparent;
-
     &.language--active {
       color: $color-brand;
     }

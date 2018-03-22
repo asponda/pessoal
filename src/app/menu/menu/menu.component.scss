@@ -1,4 +1,5 @@
 @import '../../../styles/colors.scss';
+@import '../../../styles/font-family.scss';
 
 :host {
   nav {
@@ -11,6 +12,8 @@
   }
 
   li {
+    font-family: $typo-roboto-regular;
+
     list-style: none;
     margin-right: 16px;
 
@@ -23,7 +26,7 @@
     }
 
     &.menu-item--active {
-      border-bottom: 1px solid $color-brand;
+      border-bottom: 2px solid $color-brand;
     }
 
   }
@@ -31,6 +34,10 @@
   a {
     text-decoration: none;
     text-transform: lowercase;
+
+    &:hover {
+      color: $color-brand;
+    }
   }
 
 }

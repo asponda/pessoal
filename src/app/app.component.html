@@ -11,8 +11,17 @@
 
   <div class="language">
     <i aria-hidden="true" class="fas fa-globe language--icon"></i>
-    <button (click)="switchLanguage('en')" aria-label="english" [ngClass]="{'language--active': language === 'en'}">en</button>
-    <button (click)="switchLanguage('pt')" aria-label="português" [ngClass]="{'language--active': language === 'pt'}">pt</button>
+
+    <button class="button--language button__transparent" (click)="switchLanguage('en')" aria-label="english"
+            [ngClass]="{
+              'language--active': language === 'en',
+              'button--cover-language': isCover
+            }">en</button>
+    <button class="button--language button__transparent" (click)="switchLanguage('pt')" aria-label="português"
+            [ngClass]="{
+              'language--active': language === 'pt',
+              'button--cover-language': isCover
+            }">pt</button>
   </div>
 </header>
 
@@ -21,7 +30,7 @@
 </main>
 
 <footer>
-  <div class="footer--content">
+  <div class="footer--content small">
     Copyright  2018, Airton Sponda
   </div>
 </footer>
