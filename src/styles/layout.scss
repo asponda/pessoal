@@ -1,5 +1,6 @@
 @import './colors.scss';
 @import './font-family.scss';
+@import './font-size.scss';
 @import './variables.scss';
 
 body {
@@ -8,6 +9,7 @@ body {
   background-color: $color-white;
   color: $color-black;
   font-family: $typo-roboto-regular;
+  font-size: 1rem;
 
   display: flex;
 

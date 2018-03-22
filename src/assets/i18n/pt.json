@@ -1,12 +1,14 @@
 {
   "TEST": "Testando 1234 PT",
   "MENU": {
+    "HOME": "Home",
     "ABOUT": "Sobre",
     "SKILLS": "Habilidades",
     "CONTACT": "Contato"
   },
   "HOME": {
-    "SUBTITLE": "Guiado por resultados"
+    "TITLE": "Engenheiro de software",
+    "SUBTITLE": "Guiado por resultados. Especializado em ambiente web."
   },
   "CONTACT": {
     "NAME_ERROR": "Nome inválido.",
