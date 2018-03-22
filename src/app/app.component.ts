@@ -82,7 +82,7 @@ export class AppComponent implements OnInit {
   }
 
   private setPageTitle(text?: string) {
-    this.titleService.setTitle(`Airton Sponda${text ? ' - ' + text : ''}`);
+    this.titleService.setTitle(`Airton Sponda${text ? ' | ' + text : ''}`);
   }
 
   switchLanguage(language: string) {
