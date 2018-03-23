@@ -89,7 +89,7 @@ export class AppComponent implements OnInit {
     this.translateService.use(language);
 
     // Find active menu
-    const activeMenu = this.menuItens.find(m => m.active);
+    const activeMenu = this.menuItens ? this.menuItens.find(m => m.active) : null;
 
     if (activeMenu) {
       // Set page title with translated text

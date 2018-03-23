@@ -14,6 +14,9 @@ import { TranslateCustomLoader } from './translate-custom-loader';
       }
     })
   ],
+  exports: [
+    TranslateModule
+  ],
   declarations: []
 })
 export class TestModule { }

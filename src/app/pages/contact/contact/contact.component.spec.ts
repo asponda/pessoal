@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { ContactComponent } from './contact.component';
+import { TestModule } from '../../../test/test.module';
+import { SharedModule } from '../../../shared/shared.module';
+import { ContactService } from '../services/contact.service';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
@@ -8,7 +13,9 @@ describe('ContactComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContactComponent ]
+      imports: [ ReactiveFormsModule, TestModule, SharedModule ],
+      declarations: [ ContactComponent ],
+      providers: [ContactService]
     })
     .compileComponents();
   }));
