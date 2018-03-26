@@ -15,5 +15,31 @@
     "EMAIL_ERROR": "Invalid e-mail.",
     "SUBJECT_ERROR": "Invalid subject.",
     "MESSAGE_ERROR": "Invalid message."
+  },
+  "ABOUT": {
+    "HOW_I_DO": {
+      "TITLE": "How I do",
+      "TEXT": "I'm a fullstack developer/software engineer with 8 years experience, graduated in Information Systems and MBA in Software Engineer in FIAP."
+    },
+    "TECH": {
+      "TITLE": "Technologies I most usually use",
+      "BUTTON": "View my skills"
+    },
+    "EXPERIENCE": {
+      "TITLE": "Experience",
+      "TEXT": "<p>I not just write code, I search resolve the client problem with better form, using the best programming pratices, patterns, agile methodologies and the most important thing, know and understand the businness core.</p><p>I have a large experience in financial sector, working for the big companies like BTG Pactual and Itaú Unibanco.Also I worked in public sector for governament organs.</p><p>In most projects where I worked, All are medium to large. All has big access tax and increase the client income, for example, in life assurance project for Itaú Unibanco, we increased the number of bank's life assurance sales by 200% in first month of implantation.</p>"
+    },
+    "LOVE": {
+      "TITLE": "What I love",
+      "TEXT": "I like new technologies and programming. I love web environment, I think it'll not die so soon."
+    },
+    "LIVE": {
+      "TITLE": "Where I live",
+      "TEXT": "I live in city called Mogi das Cruzes, São Paulo state - Brazil. I was working practically all my professional life in São Paulo (capitol)."
+    },
+    "PROJECTS": {
+      "TITLE": "Last projects",
+      "TEXT": ""
+    }
   }
 }

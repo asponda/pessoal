@@ -1,27 +1,61 @@
+<h1 [translate]="'MENU.ABOUT'">About</h1>
+
 <app-avatar [imgSrc]="'/assets/images/airton.png'"></app-avatar>
 
-<h1>About</h1>
+<section>
+  <h2 [translate]="'ABOUT.HOW_I_DO.TITLE'">How I do</h2>
+  <p [translate]="'ABOUT.HOW_I_DO.TEXT'">
+      I'm a fullstack developer/software engineer with 8 years experience, graduated in Information Systems and MBA in Software Engineer in FIAP.
+  </p>
+</section>
 
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae urna a
-  odio lobortis laoreet non vitae orci. Integer ut est at purus iaculis porttitor ut eu justo.
-  Morbi vitae ullamcorper justo. Donec at ultrices ante. Suspendisse at semper ex, vel dictum urna.
-  Ut eu urna mollis ante congue tristique quis id mauris. Pellentesque a convallis enim, id varius sem.
-  Mauris faucibus felis viverra cursus tempus.
-</p>
+<section>
+  <h2 [translate]="'ABOUT.TECH.TITLE'">Technologies I most usually use</h2>
 
-<p>
-  Maecenas non velit justo. Aenean at porttitor magna, eu facilisis justo.
-  Donec ornare risus eu est porttitor efficitur.
-  Phasellus at libero eu tellus tincidunt finibus.
-   Vivamus lacinia ante et lorem egestas suscipit.
-   Etiam aliquet dignissim leo, et imperdiet augue.
-   In facilisis, lectus vel dapibus pellentesque, urna odio auctor nisl,
-   et pretium erat lacus ut tellus. Integer sit amet lorem id lacus gravida placerat sodales id mi.
-   Maecenas euismod dui sit amet augue imperdiet mollis sit amet a turpis.
-   Etiam ac enim vehicula leo suscipit tincidunt at vitae arcu.
-   Pellentesque tristique sit amet magna eu porta.
-   Mauris rhoncus ante at imperdiet dapibus. Morbi enim nisi, pulvinar non nisi vitae,
-   mattis iaculis erat. Morbi dapibus mattis fringilla. Morbi posuere aliquet massa non fringilla.
-    Praesent tempus, eros a pulvinar facilisis, quam orci dignissim felis, eget varius augue nisl a tortor.
-</p>
+  <ul>
+    <li>C#</li>
+    <li>Javascript</li>
+    <li>NodeJS</li>
+    <li>Angular</li>
+    <li>SQL Server</li>
+    <li>Mongo DB</li>
+  </ul>
+
+  <button (click)="viewMySkillsClick()" [translate]="'ABOUT.TECH.BUTTON'">View my skills</button>
+</section>
+
+<section>
+  <h2 [translate]="'ABOUT.EXPERIENCE.TITLE'">Experience</h2>
+
+  <article [innerHTML]="'ABOUT.EXPERIENCE.TEXT' | translate"></article>
+</section>
+
+<section>
+  <h2 [translate]="'ABOUT.LOVE.TITLE'">What I love</h2>
+  <p [translate]="'ABOUT.LOVE.TEXT'">
+    I like new technologies and programming. I love web environment, I think it'll not die so soon.
+  </p>
+</section>
+
+<section>
+  <h2 [translate]="'ABOUT.LIVE.TITLE'">Where I live</h2>
+  <p [translate]="'ABOUT.LIVE.TEXT'">
+      I live in city called Mogi das Cruzes, São Paulo state - Brazil. I was working practically all my professional life in São Paulo (capitol).
+  </p>
+</section>
+
+<section>
+  <h2 [translate]="'ABOUT.PROJECTS.TITLE'">Last projects</h2>
+  <ul>
+    <li>Itaú - Mobile Pessoa Física - Seguros Dashboard</li>
+    <li>Itaú - Mobile Pessoa Física - Seguro de Vida</li>
+    <li>Itaú - Mobile Pessoa Física - Poupança</li>
+    <li>Itaú - Interno - Custos</li>
+    <li>BTG Pactual - Extranet</li>
+    <li>Portal TradeMarketing - BRF</li>
+    <li>GIER - GIER Online</li>
+  </ul>
+</section>
+
+
+

@@ -15,5 +15,31 @@
     "EMAIL_ERROR": "E-mail inválido.",
     "SUBJECT_ERROR": "Assunto inválido.",
     "MESSAGE_ERROR": "Mensagem inválida."
+  },
+  "ABOUT": {
+    "HOW_I_DO": {
+      "TITLE": "O que faço",
+      "TEXT": "Sou desenvolvedor fullstack/engenheiro de software com 8 anos de experiência, formado em Sistema de Informação e MBA em Engenharia de Software pela FIAP."
+    },
+    "TECH": {
+      "TITLE": "As tecnologias que mais utilizo",
+      "BUTTON": "Veja as minhas habilidades"
+    },
+    "EXPERIENCE": {
+      "TITLE": "Experience",
+      "TEXT": "<p>Não apenos escrevo código, busco resolver o problema do cliente da melhor forma possível, utilizando boas práticas de programação, padrões, metodologias ágeis e o mais importante, entendendo o negócio.</p><p>Tenho larga experiência no setor financeiro, atendendo grandes clientes como BTG Pactual e Itaú Unibanco. Também já atuei no setor público, atendendo orgãos do governo.</p><p> A maioria dos projetos em que participei são de médio a grande porte. Todos tem alta taxa de acesso e teve como resultado um aumento receita do cliente, como por exemplo no projeto de seguro de vida do Itaú Unibanco que aumentamos as vendas de seguros de vida do banco em 200% no primeiro mês de implantação.</p>"
+    },
+    "LOVE": {
+      "TITLE": "O que eu amo",
+      "TEXT": "Adoro novas tecnologias e programação. Amo o ambiente web, acredito que não vá morrer tão cedo."
+    },
+    "LIVE": {
+      "TITLE": "Onde eu moro",
+      "TEXT": "Moro em uma cidade chamada Mogi das Cruzes, no estado de São Paulo - Brasil, mas trabalhei praticamente minha vida profissional inteira em São Paulo (capital)."
+    },
+    "PROJECTS": {
+      "TITLE": "Últimos Projetos",
+      "TEXT": ""
+    }
   }
 }

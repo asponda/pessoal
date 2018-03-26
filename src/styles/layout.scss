@@ -3,6 +3,10 @@
 @import './font-size.scss';
 @import './variables.scss';
 
+* {
+  word-wrap: break-word;
+}
+
 body {
   width: 100vw;
   min-height: 100vh;
@@ -33,3 +37,4 @@ body {
     color: $color-white;
   }
 }
+
