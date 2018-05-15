@@ -11,10 +11,15 @@
     "SUBTITLE": "Driven by results. Specialized in web environments."
   },
   "CONTACT": {
+    "NAME": "Name",
+    "SUBJECT": "Subject",
+    "MESSAGE": "Message",
     "NAME_ERROR": "Invalid name.",
     "EMAIL_ERROR": "Invalid e-mail.",
     "SUBJECT_ERROR": "Invalid subject.",
-    "MESSAGE_ERROR": "Invalid message."
+    "MESSAGE_ERROR": "Invalid message.",
+    "SEND": "Send",
+    "CLEAR": "Clear"
   },
   "ABOUT": {
     "HOW_I_DO": {

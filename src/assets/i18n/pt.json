@@ -11,10 +11,15 @@
     "SUBTITLE": "Guiado por resultados. Especializado em ambiente web."
   },
   "CONTACT": {
+    "NAME": "Nome",
+    "SUBJECT": "Assunto",
+    "MESSAGE": "Mensagem",
     "NAME_ERROR": "Nome inválido.",
     "EMAIL_ERROR": "E-mail inválido.",
     "SUBJECT_ERROR": "Assunto inválido.",
-    "MESSAGE_ERROR": "Mensagem inválida."
+    "MESSAGE_ERROR": "Mensagem inválida.",
+    "SEND": "Enviar",
+    "CLEAR": "Limpar"
   },
   "ABOUT": {
     "HOW_I_DO": {

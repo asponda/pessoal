@@ -4,35 +4,34 @@
 
   <form [formGroup]="contactForm" (ngSubmit)="onFormSubmit()">
 
-    <div>
-      <label for="name" required>Name</label>
-      <input id="name" type="text" formControlName="name" required />
+    <div class="input-group">
+      <label for="name" [translate]="'CONTACT.NAME'" required>Name</label>
+      <input id="name" type="text" maxlength="30" formControlName="name" required />
 
       <app-input-error [display]="isValid('name')" message="{{ 'CONTACT.NAME_ERROR' | translate }}"></app-input-error>
     </div>
 
-    <div>
+    <div class="input-group">
       <label for="email" required>E-Mail</label>
-      <input id="email" type="text" formControlName="email" required />
+      <input id="email" type="email" maxlength="70" formControlName="email" required />
       <app-input-error [display]="isValid('email')" message="{{ 'CONTACT.EMAIL_ERROR' | translate }}"></app-input-error>
     </div>
 
-    <div>
-      <label for="subject" required>Subject</label>
-      <input id="subject" type="text" formControlName="subject" required />
+    <div class="input-group">
+      <label for="subject" [translate]="'CONTACT.SUBJECT'" required>Subject</label>
+      <input id="subject" type="text" maxlength="30" formControlName="subject" required />
       <app-input-error [display]="isValid('subject')" message="{{ 'CONTACT.SUBJECT_ERROR' | translate }}"></app-input-error>
     </div>
 
-    <div>
-      <label for="message" required>Message</label>
-      <input id="message" type="text" formControlName="message" required />
+    <div class="input-group">
+      <label for="message" [translate]="'CONTACT.MESSAGE'" required>Message</label>
+      <textarea id="message"  maxlength="150" formControlName="message" required></textarea>
       <app-input-error [display]="isValid('message')" message="{{ 'CONTACT.MESSAGE_ERROR' | translate }}"></app-input-error>
     </div>
 
     <div class="buttons">
-      <button type="submit">Send</button>
-      <button type="button" (click)="onClearClick()">Clear</button>
-      <app-input-error [display]="isValid('name')"></app-input-error>
+      <button type="submit" [translate]="'CONTACT.SEND'">Send</button>
+      <button type="button" [translate]="'CONTACT.CLEAR'" (click)="onClearClick()">Clear</button>
     </div>
   </form>
 
