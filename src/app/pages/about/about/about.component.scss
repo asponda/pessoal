@@ -1,3 +1,10 @@
+@import '../../../../styles/colors.scss';
+
 section {
   margin-bottom: 32px;
+}
+
+.section--i {
+  font-size: 52px;
+  color: $color-brand-dark;
 }
