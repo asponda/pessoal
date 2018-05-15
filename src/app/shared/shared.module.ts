@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { LogoComponent } from './components/logo/logo.component';
 import { InputErrorComponent } from './components/input-error/input-error.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
+import { ApiCommunicationService } from './services/api-communication/api-communication.service';
 
 @NgModule({
   imports: [
@@ -12,6 +13,6 @@ import { AvatarComponent } from './components/avatar/avatar.component';
   ],
   declarations: [LogoComponent, InputErrorComponent, AvatarComponent],
   exports: [LogoComponent, InputErrorComponent, AvatarComponent],
-  providers: []
+  providers: [ApiCommunicationService]
 })
 export class SharedModule { }

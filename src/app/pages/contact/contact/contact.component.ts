@@ -42,7 +42,7 @@ export class ContactComponent implements OnInit {
         this.clearForm();
       },
       (error) => {
-
+        console.log(error);
       }
     );
 

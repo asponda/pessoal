@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 // Translate
@@ -14,9 +14,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { MenuModule } from './menu/menu.module';
 import { SharedModule } from './shared/shared.module';
 
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
+
+// Services
+import { MockHttpClient } from './http/mock-http.service';
+import { environment } from '../environments/environment';
+import { WebpackTranslateLoader } from './i18n/webpack-translate-loader';
 
 @NgModule({
   declarations: [
@@ -29,8 +31,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
+        useClass: WebpackTranslateLoader
       }
     }),
     SharedModule,
@@ -39,7 +40,20 @@ export function HttpLoaderFactory(http: HttpClient) {
   exports: [
     TranslateModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HttpClient,
+      useFactory: (httpHandler: HttpHandler) => {
+        if (environment.mock) {
+          return new MockHttpClient(httpHandler);
+        } else {
+          return new HttpClient(httpHandler);
+        }
+      },
+
+      deps: [HttpHandler]
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
