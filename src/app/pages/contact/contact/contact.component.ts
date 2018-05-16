@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { Contact } from '../model/contact';
 import { ContactService } from '../services/contact.service';
+import { FormsService } from '../../../shared/services/forms/forms.service';
 
 @Component({
   selector: 'app-contact',
@@ -18,7 +19,10 @@ export class ContactComponent implements OnInit {
     message: new FormControl('', Validators.required)
   });
 
-  constructor(private contactService: ContactService) { }
+  constructor(
+    private contactService: ContactService,
+    private formsService: FormsService
+  ) { }
 
   ngOnInit() {
   }
@@ -26,6 +30,7 @@ export class ContactComponent implements OnInit {
   onFormSubmit() {
 
     if (!this.contactForm.valid) {
+      this.formsService.markControlsAsTouched(this.contactForm);
       return;
     }
 
