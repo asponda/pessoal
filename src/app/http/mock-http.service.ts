@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/catch';
 import { HttpClient, HttpHandler, HttpBackend, HttpRequest, HttpResponse, HttpHeaders } from '@angular/common/http';
 import { Subject } from 'rxjs/Subject';
 import { mockData } from '../../environments/mock';
@@ -25,9 +24,7 @@ export class MockHttpClient extends HttpClient {
       return response;
     }
 
-    get(url: string, options?: any): Observable<any> {
-      console.log('Mock Http POST...');
-
+    private requestMock(url: string, body?: any, options?: any) {
       const retorno = new Subject<any>();
 
       // Simulate API call
@@ -36,7 +33,7 @@ export class MockHttpClient extends HttpClient {
         const error = response ? '' : this.errorMock;
 
         if (error) {
-          console.log('Router Error', url, options, error);
+          console.log('Mock Error', url, body, options, error);
         } else {
           retorno.next(response);
         }
@@ -45,23 +42,23 @@ export class MockHttpClient extends HttpClient {
       return retorno;
     }
 
+    get(url: string, options?: any): Observable<any> {
+      console.log('Mock Http GET...');
+      return this.requestMock(url, null, options);
+    }
+
     post(url: string, body: any, options?: any): Observable<any> {
       console.log('Mock Http POST...');
+      return this.requestMock(url, body, options);
+    }
 
-      const retorno = new Subject<any>();
+    put(url: string, body: any, options?: any): Observable<any> {
+      console.log('Mock Http PUT...');
+      return this.requestMock(url, body, options);
+    }
 
-      // Simulate API call
-      setTimeout(() => {
-        const response = this.getMock(url);
-        const error = response ? '' : this.errorMock;
-
-        if (error) {
-          console.log('Router Error', url, body, options, error);
-        } else {
-          retorno.next(response);
-        }
-      }, 2000);
-
-      return retorno;
+    delete(url: string, body: any, options?: any): Observable<any> {
+      console.log('Mock Http DELETE...');
+      return this.requestMock(url, body, options);
     }
 }

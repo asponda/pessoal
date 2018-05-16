@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs/observable';
-import 'rxjs/add/operator/map';
 
 import { Contact } from '../model/contact';
 

@@ -1,25 +1,23 @@
 import { Injectable } from '@angular/core';
 
-import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
 
 import { Skill } from '../model/skill';
-import { getSkillsMock } from './mock/getSkills.mock';
+import { ApiCommunicationService } from '../../../shared/services/api-communication/api-communication.service';
 
 @Injectable()
 export class SkillsService {
 
-  constructor() { }
+  constructor(private communication: ApiCommunicationService) { }
 
   getSkills(): Observable<Skill[]> {
-    const sub =  new Subject<Skill[]>();
-
-    setTimeout(() => {
-      sub.next(getSkillsMock);
-    }, 500);
-
-    return sub;
+    return this.communication.get(
+      {
+        apiUrl: '/skills'
+      }
+    ).map((data: Array<Object>) => {
+      return data.map((item: any) => ({ name: item.name, quantity: item.quantity }));
+    });
   }
 
 }
