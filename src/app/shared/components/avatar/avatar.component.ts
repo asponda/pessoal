@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AvatarComponent implements OnInit {
 
-  @Input() imgSrc= '';
+  @Input() imgSrc = '';
   @Input() alt = 'Avatar image';
 
   constructor() { }
