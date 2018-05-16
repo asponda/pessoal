@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  apiServer: '',
-  mock: true
+  apiServer: 'http://localhost:3000',
+  mock: false
 };

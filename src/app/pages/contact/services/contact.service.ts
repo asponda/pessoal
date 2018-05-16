@@ -14,7 +14,7 @@ export class ContactService {
   send(contact: Contact): Observable<any> {
     return this.communication.post(
       {
-        apiUrl: '/email/send',
+        apiUrl: '/mails/send',
         body: {
           name: contact.name,
           email: contact.email,
