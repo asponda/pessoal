@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
+import '../../rxjs-imports';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateCustomLoader } from './translate-custom-loader';
