@@ -1,10 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 // Translate
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 // Components
 import { AppComponent } from './app.component';
@@ -16,7 +15,6 @@ import { SharedModule } from './shared/shared.module';
 
 
 // Services
-import { environment } from '../environments/environment';
 import { WebpackTranslateLoader } from './i18n/webpack-translate-loader';
 
 @NgModule({

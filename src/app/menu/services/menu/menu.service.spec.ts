@@ -13,8 +13,8 @@ describe('MenuService', () => {
     expect(service).toBeTruthy();
   }));
 
-  it('should have menu itens'), inject([MenuService], (service: MenuService) => {
+  it('should have menu itens', inject([MenuService], (service: MenuService) => {
     const itens = service.getMenuItens();
-    expect(itens).toBeDefined();
-  });
+    expect(itens).toBeTruthy();
+  }));
 });
