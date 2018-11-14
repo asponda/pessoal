@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable ,  Subject } from 'rxjs';
 import { HttpClient, HttpHandler, HttpBackend, HttpRequest, HttpResponse, HttpHeaders } from '@angular/common/http';
-import { Subject } from 'rxjs/Subject';
 import { mockData } from '../../environments/mock';
 
 @Injectable()

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { Skill } from '../model/skill';
 import { ApiCommunicationService } from '../../../shared/services/api-communication/api-communication.service';
@@ -15,9 +16,11 @@ export class SkillsService {
       {
         apiUrl: '/skills'
       }
-    ).map((data: Array<Object>) => {
-      return data.map((item: any) => ({ name: item.name, quantity: item.quantity }));
-    });
+    ).pipe(
+      map((data: Array<Object>) => {
+        return data.map((item: any) => ({ name: item.name, quantity: item.quantity }));
+      })
+    );
   }
 
 }

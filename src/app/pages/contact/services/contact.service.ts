@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 
-import { Observable } from 'rxjs/observable';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { Contact } from '../model/contact';
 
 import { ApiCommunicationService, ApiCommunicationRequest } from '../../../shared/services/api-communication/api-communication.service';
+
 
 @Injectable()
 export class ContactService {
@@ -22,9 +24,10 @@ export class ContactService {
           message: contact.message
         }
       }
-    ).map((data) => {
+    ).pipe(
+      map((data) => {
       return data;
-    });
+    }));
   }
 
 }
