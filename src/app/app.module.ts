@@ -16,7 +16,6 @@ import { SharedModule } from './shared/shared.module';
 
 
 // Services
-import { MockHttpClient } from './http/mock-http.service';
 import { environment } from '../environments/environment';
 import { WebpackTranslateLoader } from './i18n/webpack-translate-loader';
 
@@ -39,20 +38,6 @@ import { WebpackTranslateLoader } from './i18n/webpack-translate-loader';
   ],
   exports: [
     TranslateModule
-  ],
-  providers: [
-    {
-      provide: HttpClient,
-      useFactory: (httpHandler: HttpHandler) => {
-        if (environment.mock) {
-          return new MockHttpClient(httpHandler);
-        } else {
-          return new HttpClient(httpHandler);
-        }
-      },
-
-      deps: [HttpHandler]
-    }
   ],
   bootstrap: [AppComponent]
 })

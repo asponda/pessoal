@@ -5,7 +5,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact.component';
 import { TestModule } from '../../../test/test.module';
 import { SharedModule } from '../../../shared/shared.module';
-import { ContactService } from '../services/contact.service';
 import { RouterTestingModule } from '@angular/router/testing';
 
 describe('ContactComponent', () => {
@@ -16,7 +15,7 @@ describe('ContactComponent', () => {
     TestBed.configureTestingModule({
       imports: [ ReactiveFormsModule, TestModule, SharedModule, RouterTestingModule ],
       declarations: [ ContactComponent ],
-      providers: [ContactService]
+      providers: []
     })
     .compileComponents();
   }));
