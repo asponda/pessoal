@@ -3,10 +3,31 @@
 
 h1 {
   font-size: $font-size-big;
+  font-family: $typo-opensans-light;
+  margin-bottom: 16px;
 }
 
 h2 {
+  font-size: $font-size-big;
+  font-family: $typo-opensans-light;
+  margin-bottom: 8px;
+}
+
+.small {
+  font-size: $font-size-small;
+}
+
+.jumbo {
+  font-size: $font-size-jumbo;
+}
+
+.sub-jumbo {
   font-size: $font-size-medium;
   font-family: $typo-opensans-regular;
   font-weight: normal;
+}
+
+p, .text {
+  font-size: $font-size-medium;
+  font-family: $typo-opensans-regular;
 }

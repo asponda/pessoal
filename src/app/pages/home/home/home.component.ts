@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +9,5 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-    ngOnInit() {}
-
+  ngOnInit() {}
 }

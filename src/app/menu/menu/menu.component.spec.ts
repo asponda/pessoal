@@ -1,8 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
+import { TestModule } from '../../test/test.module';
+
 import { MenuComponent } from './menu.component';
 import { MenuService } from '../services/menu/menu.service';
+
 
 describe('MenuComponent', () => {
   let component: MenuComponent;
@@ -10,7 +13,10 @@ describe('MenuComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [
+        RouterTestingModule,
+        TestModule
+      ],
       declarations: [ MenuComponent ]
     })
     .compileComponents();
@@ -23,16 +29,19 @@ describe('MenuComponent', () => {
     component.menuItens = [
       {
         text: 'Test1',
+        translateId: 'Test1',
         active: false,
         routerLink: ['/Test1']
       },
       {
         text: 'Test2',
+        translateId: 'Test2',
         active: true,
         routerLink: ['/Test2']
       },
       {
         text: 'Test3',
+        translateId: 'Test3',
         active: false,
         routerLink: ['/Test3']
       }

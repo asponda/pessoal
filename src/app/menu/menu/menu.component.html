@@ -4,7 +4,9 @@
 }">
   <ul>
     <li *ngFor="let item of menuItens" [ngClass]="{'menu-item--active': item.active}">
-      <a [routerLink]="item.routerLink" routerLinkActive="router-link-active">{{item.text}}</a>
+      <a [routerLink]="item.routerLink" routerLinkActive="router-link-active" [translate]="item.translateId" >
+        {{item.text}}
+      </a>
     </li>
   </ul>
 </nav>

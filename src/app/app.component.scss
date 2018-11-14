@@ -1,24 +1,78 @@
+@import '../styles/colors.scss';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+}
+
+main {
+  padding: 16px;
+
+  @media (min-width: '800px') {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
 header {
   display: flex;
   align-items: center;
-  padding: 8px 16px;
-  min-height: 66px;
+  padding: 16px;
 
   @media (max-width: '414px') {
     flex-direction: column;
   }
 }
 
+footer {
+  padding: 16px;;
+  margin-top:  auto;
+
+  display: flex;
+  align-items: center;
+
+}
+
 .logo {
   display: flex;
-  margin-top: 8px;
 }
 
 .menu {
-  margin-left: auto;
+
+  margin-left: 32px;
 
   @media (max-width: '414px') {
     margin-left: 0px;
     margin-top: 16px;
   }
+}
+
+.button--cover-language {
+  color: $color-white;
+}
+
+.language {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: '414px') {
+    margin-left: 0px;
+    margin-top: 16px;
+  }
+
+  button {
+    &.language--active {
+      color: $color-brand;
+    }
+  }
+}
+
+.language--icon {
+  margin-right: 8px;
+  font-size: 24px;
 }

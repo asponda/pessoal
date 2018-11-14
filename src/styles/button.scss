@@ -1,8 +1,20 @@
+@import './colors.scss';
+
 button, .button {
   display: inline-block;
-  background: grey;
   border: none;
   padding: 16px;
   border-radius: 4px;
   text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.button__transparent {
+  background-color: transparent;
+}
+
+.button__brand {
+  background-color: $color-brand-dark;
+  color: $color-white;
 }

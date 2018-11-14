@@ -1,0 +1,14 @@
+@import '~styles/colors.scss';
+
+.skill-item--group {
+  display: flex;
+  min-height: 30px;
+}
+
+.skill-item--content {
+  flex: 1 1 auto;
+}
+
+.skill-item--content-fill {
+  background-color: $color-brand;
+}

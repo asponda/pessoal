@@ -2,8 +2,26 @@
   <div class="logo">
     <app-logo></app-logo>
   </div>
+
   <div class="menu">
+
     <app-menu [menuItens]="menuItens" [theme]="menuTheme"></app-menu>
+
+  </div>
+
+  <div class="language">
+    <i aria-hidden="true" class="fas fa-globe language--icon"></i>
+
+    <button class="button--language button__transparent" (click)="switchLanguage('en')" aria-label="english"
+            [ngClass]="{
+              'language--active': language === 'en',
+              'button--cover-language': isCover
+            }">en</button>
+    <button class="button--language button__transparent" (click)="switchLanguage('pt')" aria-label="português"
+            [ngClass]="{
+              'language--active': language === 'pt',
+              'button--cover-language': isCover
+            }">pt</button>
   </div>
 </header>
 
@@ -11,4 +29,8 @@
   <router-outlet></router-outlet>
 </main>
 
-<footer></footer>
+<footer>
+  <div class="footer--content small">
+    Copyright 2018 - Airton Sponda
+  </div>
+</footer>
