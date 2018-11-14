@@ -2,7 +2,6 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SkillsComponent } from './skills.component';
 import { SkillItemComponent } from '../components/skill-item/skill-item.component';
-import { SkillsService } from '../services/skills.service';
 import { SharedModule } from '../../../shared/shared.module';
 import { TestModule } from '../../../test/test.module';
 
@@ -14,7 +13,7 @@ describe('SkillsComponent', () => {
     TestBed.configureTestingModule({
       imports: [ SharedModule, TestModule ],
       declarations: [ SkillsComponent, SkillItemComponent ],
-      providers: [ SkillsService ]
+      providers: []
     })
     .compileComponents();
   }));
