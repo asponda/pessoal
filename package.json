@@ -7,6 +7,7 @@
     "start": "ng serve --aot",
     "build": "ng build --prod",
     "test": "ng test",
+    "test-watch": "ng test --watch",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
