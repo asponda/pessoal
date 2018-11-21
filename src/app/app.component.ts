@@ -52,16 +52,7 @@ export class AppComponent implements OnInit {
   }
 
   private setTheme(url) {
-    const isHome =  url === '/' || url === '/home';
-
-    this.menuTheme = isHome ? 'white' : 'black';
-
-    // Verify if route is home to add cover theme
-    if (isHome) {
-      this.renderer.addClass(document.body, 'cover');
-    } else {
-      this.renderer.removeClass(document.body, 'cover');
-    }
+    this.menuTheme = 'white';
   }
 
   private setActiveMenu(route) {
