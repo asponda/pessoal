@@ -16,12 +16,6 @@ jobs:
 
     working_directory: ~/repo
 
-    branches:
-      only:
-        - develop
-        - staging
-        - master
-
     steps:
       - checkout
 
@@ -94,7 +88,13 @@ workflows:
     # The build and deploy workflow
     build_and_deploy:
         jobs:
-            - build
+            - build:
+                filters:
+                    branches:
+                        only:
+                            - develop
+                            - staging
+                            - master
             # The deploy job will only run on the filtered branches and
             # require the build job to be successful before it starts
             - deploy:
