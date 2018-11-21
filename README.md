@@ -1,2 +1,2 @@
 # Pessoal
-Projeto de apresentação pessoal utilizando Angular. s
+Projeto de apresentação pessoal utilizando Angular.
