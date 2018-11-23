@@ -1,0 +1,48 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/media-mixins.scss';
+
+:host {
+    width: 100%;
+    display: flex;
+    padding: 16px;
+    flex-flow: row;
+    align-items: center;
+
+    @include phone {
+        flex-flow: column;
+    }
+
+    &.normal {
+        background-color: $color-brand-dark;
+        color: $color-white;
+        box-shadow: 0 2px 6px 0 rgba(35,35,35,.4);
+
+        a {
+            color: $color-white;
+        }
+    }
+
+}
+
+.footer__contact {
+    margin-left: 32px;
+
+    @include phone {
+        margin-left: 0px;
+        margin-top: 16px;
+    }
+
+    .social {
+
+        * {
+          margin-right: 16px;
+        }
+
+        a {
+          font-size: 60px;
+          text-decoration: none;
+        }
+      }
+}
+
+

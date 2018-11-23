@@ -43,16 +43,11 @@ export class AppComponent implements OnInit {
       if (event instanceof NavigationStart) {
         this.isCover = event.url === '/' || event.url === '/home';
 
-        this.setTheme(event.url);
         this.setActiveMenu(event.url);
       }
     });
 
     this.menuItens = this.menuService.getMenuItens();
-  }
-
-  private setTheme(url) {
-    this.menuTheme = 'white';
   }
 
   private setActiveMenu(route) {
