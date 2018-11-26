@@ -55,3 +55,15 @@ ul {
   text-align: center;
 }
 
+.flex-container {
+  display: flex;
+  flex-flow: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  width: 300px;
+}
+

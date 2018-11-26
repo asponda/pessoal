@@ -1,5 +1,9 @@
 @import '../../../../styles/colors.scss';
 
+.avatar-container {
+  margin-bottom: 36px;
+}
+
 ul {
   margin-bottom: 16px;
 }
@@ -16,3 +20,5 @@ section {
   font-size: 52px;
   color: $color-brand-dark;
 }
+
+
