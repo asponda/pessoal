@@ -21,4 +21,13 @@ section {
   color: $color-brand-dark;
 }
 
+.flex-item {
+  * {
+    display: block;
+  }
+
+  .flex-item--center {
+    text-align: center;
+  }
+}
 

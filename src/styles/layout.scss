@@ -2,6 +2,7 @@
 @import './font-family.scss';
 @import './font-size.scss';
 @import './variables.scss';
+@import './media-mixins.scss';
 
 * {
   word-wrap: break-word;
@@ -65,5 +66,9 @@ ul {
 
 .flex-item {
   width: 300px;
+
+  @include phone {
+    width: 400px;
+  }
 }
 
